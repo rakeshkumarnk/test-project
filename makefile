@@ -1,10 +1,12 @@
-ABC.exe:main.o big3.o fact.o reverse.o
-	gcc -o ABC.exe:main.o big3.o fact.o reverse.o
+ABC.exe:main.o big2.o fact.o rev.o
+	gcc -o ABC.exe main.o big2.o fact.o rev.o
 main.o:main.c
 	gcc -c main.c
-big3.o:big3.c
-	gcc -c big3.c
+big2.o:big2.c
+	gcc -c big2.c
 fact.o:fact.c
 	gcc -c fact.c
-reverse.o:reverse.c
-	gcc -c reverse.c
+rev.o:rev.c
+	 gcc -c rev.c
+clean:
+	rm -rf *.o
